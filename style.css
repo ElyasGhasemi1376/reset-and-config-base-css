@@ -1,0 +1,208 @@
+/* =========================
+  :root Variables
+   ========================= */
+:root {
+  /* Color Palette */
+  --color-primary: #007bff; /* Main primary color */
+  --color-secondary: #6c757d; /* Secondary color */
+  --color-background: #f8f9fa; /* Light background color */
+  --color-text: #343a40; /* Dark text color */
+  --color-accent: #28a745; /* Accent color for highlights */
+
+  /* Typography */
+  --font-family-base: 'Roboto', sans-serif; /* Base font family */
+  --font-family-persiancustom: 'tanha'; /* Custom Persian font */
+  --font-size-base: 1.6rem; /* Base font size */
+  --font-size-large: 1.8rem; /* Large text size */
+  --font-size-heading1: 2.4rem; /* H1 font size */
+  --font-size-heading2: 2rem; /* H2 font size */
+  --font-size-heading3: 1.8rem; /* H3 font size */
+  --font-size-heading4: 1.6rem; /* H4 font size */
+  --font-size-heading5: 1.4rem; /* H5 font size */
+  --font-size-heading6: 1.2rem; /* H6 font size */
+
+  /* Spacing Units */
+  --space-xsmall: 0.25rem; /* Extra small spacing */
+  --space-small: 0.5rem; /* Small spacing */
+  --space-medium: 1rem; /* Medium spacing */
+  --space-large: 1.5rem; /* Large spacing */
+  --space-xlarge: 2rem; /* Extra large spacing */
+
+  /* Border Radius */
+  --border-radius-small: 0.2rem; /* Small border radius */
+  --border-radius-medium: 0.5rem; /* Medium border radius */
+
+  /* Shadows */
+  --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Light shadow */
+  --shadow-medium: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15); /* Medium shadow */
+
+  /* Container */
+  --container-max-width: 72rem; /* Maximum width for container */
+}
+
+/* =========================
+    Font Imports
+     ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+/* Persian Font from Assets */
+@font-face {
+  font-family: 'tanha';
+  src: url('assets/fonts/tanha-font-v0.9/Tanha.woff') format('woff'),
+    url('assets/fonts/tanha-font-v0.9/Tanha.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* =========================
+    Global Styles
+     ========================= */
+*,
+*::before,
+*::after {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px for easier rem calculations */
+}
+
+body {
+  height: 100vh; /* Full viewport height */
+  font-family: var(--font-family-base), var(--font-family-persiancustom); /* Font family */
+  font-weight: 400; /* Normal font weight */
+  font-size: var(--font-size-base); /* Base font size */
+  line-height: 1.6; /* Line height */
+  background-color: var(--color-background); /* Background color */
+  color: var(--color-text); /* Text color */
+}
+
+/* =========================
+    Typography Styles
+     ========================= */
+p {
+  margin: var(--space-medium) 0; /* Vertical margin for paragraphs */
+  font-size: var(--font-size-base); /* Base font size for paragraphs */
+  line-height: 1.6; /* Line height for paragraphs */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--space-large) 0; /* Vertical margin for headings */
+  font-weight: 600; /* Common font weight for headings */
+}
+
+/* Headings */
+h1 {
+  font-size: var(--font-size-heading1); /* H1 font size */
+}
+
+h2 {
+  font-size: var(--font-size-heading2); /* H2 font size */
+}
+
+h3 {
+  font-size: var(--font-size-heading3); /* H3 font size */
+}
+
+h4 {
+  font-size: var(--font-size-heading4); /* H4 font size */
+}
+
+h5 {
+  font-size: var(--font-size-heading5); /* H5 font size */
+}
+
+h6 {
+  font-size: var(--font-size-heading6); /* H6 font size */
+}
+
+/* =========================
+    Media Queries
+     ========================= */
+@media (min-width: 768px) {
+  body {
+    font-size: var(--font-size-large); /* Increased font size for larger screens */
+  }
+
+  p {
+    font-size: 1.125rem; /* Increased paragraph font size */
+  }
+
+  h1 {
+    font-size: var(--font-size-heading1); /* Maintain H1 size */
+  }
+
+  h2 {
+    font-size: var(--font-size-heading2); /* Maintain H2 size */
+  }
+
+  h3 {
+    font-size: var(--font-size-heading3); /* Maintain H3 size */
+  }
+
+  h4 {
+    font-size: var(--font-size-heading4); /* Maintain H4 size */
+  }
+
+  h5 {
+    font-size: var(--font-size-heading5); /* Maintain H5 size */
+  }
+
+  h6 {
+    font-size: var(--font-size-heading6); /* Maintain H6 size */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 2rem; /* Further increased font size for larger screens */
+  }
+
+  p {
+    font-size: 1.25rem; /* Increased paragraph font size */
+  }
+
+  h1 {
+    font-size: var(--font-size-heading1); /* Maintain H1 size */
+  }
+
+  h2 {
+    font-size: var(--font-size-heading2); /* Maintain H2 size */
+  }
+
+  h3 {
+    font-size: var(--font-size-heading3); /* Maintain H3 size */
+  }
+
+  h4 {
+    font-size: var(--font-size-heading4); /* Maintain H4 size */
+  }
+
+  h5 {
+    font-size: var(--font-size-heading5); /* Maintain H5 size */
+  }
+
+  h6 {
+    font-size: var(--font-size-heading6); /* Maintain H6 size */
+  }
+}
+
+/* =========================
+    Container Styles
+     ========================= */
+.container {
+  max-width: var(--container-max-width); /* Maximum width for container */
+  margin: 0 auto; /* Center the container */
+  padding: var(--space-medium); /* Padding for container */
+}
+
+.block {
+  padding: var(--space-large); /* Padding for block elements */
+}
