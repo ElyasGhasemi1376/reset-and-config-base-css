@@ -37,7 +37,7 @@
   --shadow-medium: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15); /* Medium shadow */
 
   /* Container */
-  --container-max-width: 72rem; /* Maximum width for container */
+  --container-max-width: 114rem; /* Maximum width for container */
 }
 
 /* =========================
