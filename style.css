@@ -128,7 +128,7 @@ h6 {
 /* =========================
     Media Queries
      ========================= */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: var(--font-size-large); /* Increased font size for larger screens */
   }
@@ -162,7 +162,7 @@ h6 {
   }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     font-size: 2rem; /* Further increased font size for larger screens */
   }
